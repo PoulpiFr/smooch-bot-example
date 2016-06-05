@@ -19,6 +19,17 @@ $(function () {
   var salesChartData = {
     labels: ["janvier","fevrier","mars","avril","mai","juin"],
     datasets: [
+    {
+        label: "Moyenne",
+        lineColor: "rgba(102,102,102, 1)",
+        fillColor: "rgba(102,102,102, 1)",
+        strokeColor: "rgba(102,102,102, 1)",
+        pointColor: "#555",
+        pointStrokeColor: "rgba(102,102,102,1)",
+        pointHighlightFill: "#fff",
+        pointHighlightStroke: "rgba(220,220,200,1)",
+        data: [60,70,80,85,80,95]
+      },
       {
         label: "Malcolm",
         lineColor: "rgb(240,35,17)",
@@ -29,18 +40,8 @@ $(function () {
         pointHighlightFill: "#fff",
         pointHighlightStroke: "rgb(220,220,220)",
         data: [40,60,50,70,70,90]
-      },
-      {
-        label: "Moyenne",
-        lineColor: "rgba(102,102,102, 1)",
-        fillColor: "rgba(102,102,102, 1)",
-        strokeColor: "rgba(102,102,102, 1)",
-        pointColor: "#555",
-        pointStrokeColor: "rgba(102,102,102,1)",
-        pointHighlightFill: "#fff",
-        pointHighlightStroke: "rgba(220,220,200,1)",
-        data: [60,70,80,85,80,95]
       }
+      
     ]
   };
 

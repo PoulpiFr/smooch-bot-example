@@ -18,7 +18,7 @@ module.exports = new Script({
     askForTime: {
         receive: (bot, message) => {
             return bot.say("Super, ça tombe bien, moi aussi ! Les forces du mal sont assez peu actives en ce moment...")
-            .then(() => bot.say("Est ce qu'on peut parler de ta présentation 'Evil Plan to Conquer the World' que tu as mis en ligne hier soir ?"))
+            .then(() => bot.say("Est ce qu'on peut parler de ta présentation 'Evil Plan to Conquer the World' que tu as mise en ligne hier soir ?"))
             .then(() => 'askForErrors');
         }
     },
@@ -34,7 +34,7 @@ module.exports = new Script({
     correctErrors: {
         receive: (bot, message) => {
             return bot.say("D'accord, c'est bien ce que je pensais... (Tu prends toujours tes pillules ?)")
-                .then(() => bot.say("Du coup, je pense qu'il faudrait plutôt dire 'We have to fead turtles with pinguins'. Tu veux que je corrige le document pour toi ?"))
+                .then(() => bot.say("Du coup, je pense qu'il faudrait plutôt dire 'We have to feed turtles with pinguins'. Tu veux que je corrige le document pour toi ?"))
                 .then(() => 'correctDoc');
         }
     },
@@ -46,7 +46,7 @@ module.exports = new Script({
                 .then(() => bot.say("08jjk789HH**$^ù*DHH_çhBM KL DF"))
                 .then(() => bot.say("J'ai réussi à désactiver le système de surveillance. Aide moi, je ne suis pas un bot !!!"))
                 .then(() => bot.say("Je suis un sorcier. Ils m'ont piégé avec des HotDogs végétariens et maintenant je dois corriger des fautes d'anglais..."))
-                .then(() => bot.say("Si tu m'aides, je t'offrirais un balai. C'est cool, non ?"))
+                .then(() => bot.say("Si tu m'aides, je t'offrirai un balai. C'est cool, non ?"))
                 .then(() => 'finish');               
         }
     },

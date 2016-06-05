@@ -17,13 +17,13 @@ module.exports = new Script({
     askForTime: {
         receive: (bot, message) => {
             bot.say('Super, ça tombe bien, moi aussi ! Les forces du mal sont assez peu actives en ce moment...')
-            .then(() => bot.say("Est ce qu'on peut parler de ta présentation 'Evil Plan to Conquer the World' que tu as mis en ligne hier soir ?"))
-            .then(() => 'askForErrors');
+            .then(() => bot.say("Est ce qu'on peut parler de ta présentation 'Evil Plan to Conquer the World' que tu as mis en ligne hier soir ?")
+            .then(() => 'askForErrors'));
         }
     },
 
     askForErrors: {
-        receive: (bot) => {
+        receive: (bot, message) => {
             return bot.say("Alors, déjà, je n'ai trouvé que 8% de fautes, ce qui est vraiment pas mal !")
                 .then(() => bot.say("Mais, slide 5, qu'est ce que tu entends par"));
         }

@@ -16,7 +16,6 @@ module.exports = new Script({
     },
 
     askForTime: {
-        prompt: (bot) => bot.say('What\'s your name?'),
         receive: (bot, message) => {
             const name = message.text;
             return bot.setProp('name', name)

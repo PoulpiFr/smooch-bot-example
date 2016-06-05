@@ -17,7 +17,7 @@ module.exports = new Script({
 
     askForTime: {
         receive: (bot, message) => {
-            bot.say("Super, ça tombe bien, moi aussi ! Les forces du mal sont assez peu actives en ce moment...\n Est ce qu'on peut parler de ta présentation 'Evil Plan to Conquer the World' que tu as mis en ligne hier soir ?")
+            return bot.say("Super, ça tombe bien, moi aussi ! Les forces du mal sont assez peu actives en ce moment...\n Est ce qu'on peut parler de ta présentation 'Evil Plan to Conquer the World' que tu as mis en ligne hier soir ?")
             .then(() => 'askForErrors');
         }
     },

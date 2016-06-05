@@ -10,19 +10,19 @@ module.exports = new Script({
 
     start: {
         receive: (bot) => {
-            return bot.say('Hi! I\'m Smooch Bot!')
-                .then(() => 'askName');
+            return bot.say('Hello, je suis Harry ! Est ce que tu as un peu de temps de disponible ? =) %[Oui !](postback:yes) %[Pas maintenant :/)](postback:no)')
+                .then(() => bot.say('Yop!'));
         }
     },
 
-    askName: {
+    askForTime: {
         prompt: (bot) => bot.say('What\'s your name?'),
         receive: (bot, message) => {
             const name = message.text;
             return bot.setProp('name', name)
                 .then(() => bot.say(`Great! I'll call you ${name}
 Is that OK? %[Yes](postback:yes) %[No](postback:no)`))
-                .then(() => 'finish');
+                .then((payload) => 'finish');
         }
     },
 

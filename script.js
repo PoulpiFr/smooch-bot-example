@@ -10,20 +10,24 @@ module.exports = new Script({
 
     start: {
         receive: (bot) => {
-            return bot.say('Hello, je suis Harry ! Est ce que tu as un peu de temps de disponible ? =) %[Oui !](postback:yes) %[Pas maintenant :/)](postback:no)')
-                .then(() => 'askForTime');
+            return bot.say('Hello, je suis Harry ! Est ce que tu as un peu de temps de disponible ? =)'.then(() => 'askForTime');
         }
     },
 
     askForTime: {
         receive: (bot, message) => {
-            const name = message.text;
-            return bot.setProp('name', name)
-                .then(() => bot.say(`Great! I'll call you ${name}
-Is that OK? %[Yes](postback:yes) %[No](postback:no)`))
-                .then((payload) => 'finish');
+            bot.say('Super, ça tombe bien, moi aussi ! (Ginny est en déplacement)')
+                .then(() => bot.say('Est ce qu\'on peut parler de ta présentation \'Evil Plan to Conquer the World\' que tu as mis en ligne hier soir ?))
+                    .then(() => 'askForErrors');
         }
     },
+
+    askForErrors: {
+        receive: (bot) => {
+            return bot.say('Alors, déjà, je n'ai trouvé que 8% de fautes, ce qui est vraiment pas mal !')
+                .then(() => bot.say('Mais, slide 5, qu\'est ce que tu entends par \'\'));
+        }
+    }
 
     finish: {
         receive: (bot, message) => {

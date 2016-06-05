@@ -11,7 +11,7 @@ module.exports = new Script({
     start: {
         receive: (bot) => {
             return bot.say('Hello, je suis Harry ! Est ce que tu as un peu de temps de disponible ? =) %[Oui !](postback:yes) %[Pas maintenant :/)](postback:no)')
-                .then(() => bot.say('Yop!'));
+                .then(() => 'askForTime');
         }
     },
 

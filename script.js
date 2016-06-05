@@ -10,7 +10,8 @@ module.exports = new Script({
 
     start: {
         receive: (bot) => {
-            return bot.say('Hello, je suis Harry ! Est ce que tu as un peu de temps de disponible ? =)').then(() => 'askForTime');
+            return bot.say("Hello, je suis Harry ! Est ce que tu as un peu de temps de disponible ? =)")
+            .then(() => 'askForTime');
         }
     },
 
@@ -24,7 +25,8 @@ module.exports = new Script({
     askForErrors: {
         receive: (bot, message) => {
             return bot.say("Alors, déjà, je n'ai trouvé que 8% de fautes, ce qui est vraiment pas mal !")
-                .then(() => bot.say("Mais, slide 5, qu'est ce que tu entends par"));
+                .then(() => bot.say("Mais, slide 5, qu'est ce que tu entends par ?"))
+                .then(() => 'finish');
         }
     },
 

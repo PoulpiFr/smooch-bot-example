@@ -27,7 +27,7 @@ module.exports = new Script({
             return bot.say("Alors, déjà, je n'ai trouvé que 8% de fautes, ce qui est vraiment pas mal !")
                 .then(() => bot.say("Mais, slide 5, qu'est ce que tu entends par"));
         }
-    }
+    },
 
     finish: {
         receive: (bot, message) => {
